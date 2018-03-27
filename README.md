@@ -29,6 +29,12 @@ After this other team members:
 2. Add route in `config/routes.yaml`
 3. Run server and try it: `php bin/console server:run`
 
+### 03 - @Route annotations
+
+1. Add dependency: `composer require annotations`
+2. Edit `config/routes.yaml` and `src/Controller/CustomController.php`
+3. Run server and try it: `php bin/console server:run`
+
 ## Hints
 
 ### PhpStorm

@@ -1,6 +1,3 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
-hello:
-  path: /hello/{name}
-  controller: App\Controller\CustomController::hello
