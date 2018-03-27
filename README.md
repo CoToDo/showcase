@@ -41,6 +41,15 @@ After this other team members:
 2. Edit controller `src/Controller/CustomController.php`
 3. Run server and try it: `php bin/console server:run`
 
+### 05 - entities
+
+1. Add dependencies: `composer require doctrine maker`
+2. Set your database in `.env` (`sqlite:///%kernel.project_dir%/var/data.db`) and run `php bin/console doctrine:database:create`
+2. Run `php bin/console make:entity Task` and add attributes
+3. Run `php bin/console make:entity Person` and add attributes
+4. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
+5. Add new files to git and commit
+
 ## Hints
 
 ### PhpStorm
