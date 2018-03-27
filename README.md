@@ -53,6 +53,12 @@ After this other team members:
 7. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
 8. Add new files to git and commit
 
+### 06 - CRUD
+
+1. Generate CRUD for the entities (`php bin/console make:crud Task` and for `Person`)
+2. Run server and visit the pages
+3. Implement `__toString()` method in `Person` entity, so the form for `Task` works...
+
 ## Hints
 
 ### PhpStorm
