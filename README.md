@@ -35,6 +35,12 @@ After this other team members:
 2. Edit `config/routes.yaml` and `src/Controller/CustomController.php`
 3. Run server and try it: `php bin/console server:run`
 
+### 04 - templates
+
+1. Create template `templates/hello/hello.html.twig`
+2. Edit controller `src/Controller/CustomController.php`
+3. Run server and try it: `php bin/console server:run`
+
 ## Hints
 
 ### PhpStorm

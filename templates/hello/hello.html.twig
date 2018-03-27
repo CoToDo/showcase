@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Hello</h1>
+
+<p>Nice to meet you, {{ name }}!</p>
+
+<ul>
+{% if name != 'anonymous' %}
+    <li><a href="{{ path('compute', {'x': 5}) }}">Compute 2*5+10</a></li>
+    <li>Turn to be anonymous <a href="{{ path('say_hello') }}">here</a></li>
+{% else %}
+    <li>Become boss <a href="{{ path('say_hello', {'name': 'boss'}) }}">here</a></li>
+{% endif %}
+</ul>
+
+{% endblock %}
+
+{% block title %}Greeter{% endblock %}
