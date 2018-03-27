@@ -36,6 +36,11 @@ class Task
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Person", inversedBy="tasks")
+     */
+    private $owner;
+
     public function getId()
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Task
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getOwner(): ?Person
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?Person $owner): self
+    {
+        $this->owner = $owner;
 
         return $this;
     }

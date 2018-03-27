@@ -49,6 +49,9 @@ After this other team members:
 3. Run `php bin/console make:entity Person` and add attributes
 4. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
 5. Add new files to git and commit
+6. Add bidirectional relation `Task` --owner--> `Person` with `php bin/console make:entity Task` as new field
+7. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
+8. Add new files to git and commit
 
 ## Hints
 
