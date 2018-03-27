@@ -22,3 +22,20 @@ After this other team members:
 3. `composer install`
 
 (You need [Composer](https://getcomposer.org) and [PHP 7.1.3+](https://symfony.com/doc/current/reference/requirements.html))
+
+### 02 - custom controller
+
+1. Create class `src/Controller/CustomController.php` with public method `hello`
+2. Add route in `config/routes.yaml`
+3. Run server and try it: `php bin/console server:run`
+
+## Hints
+
+### PhpStorm
+
+* If keeps caching, do File - Invalidate Caches / Restart ...
+
+### git
+
+* Don't develop in `master` branch (setup your workflow - incorporate issues and pull requests)
+* Do atomic commits (commit = atomic piece of work - changes which are related together tightly)
