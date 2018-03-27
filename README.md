@@ -22,3 +22,50 @@ After this other team members:
 3. `composer install`
 
 (You need [Composer](https://getcomposer.org) and [PHP 7.1.3+](https://symfony.com/doc/current/reference/requirements.html))
+
+### 02 - custom controller
+
+1. Create class `src/Controller/CustomController.php` with public method `hello`
+2. Add route in `config/routes.yaml`
+3. Run server and try it: `php bin/console server:run`
+
+### 03 - @Route annotations
+
+1. Add dependency: `composer require annotations`
+2. Edit `config/routes.yaml` and `src/Controller/CustomController.php`
+3. Run server and try it: `php bin/console server:run`
+
+### 04 - templates
+
+1. Create template `templates/hello/hello.html.twig`
+2. Edit controller `src/Controller/CustomController.php`
+3. Run server and try it: `php bin/console server:run`
+
+### 05 - entities
+
+1. Add dependencies: `composer require doctrine maker`
+2. Set your database in `.env` (`sqlite:///%kernel.project_dir%/var/data.db`) and run `php bin/console doctrine:database:create`
+2. Run `php bin/console make:entity Task` and add attributes
+3. Run `php bin/console make:entity Person` and add attributes
+4. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
+5. Add new files to git and commit
+6. Add bidirectional relation `Task` --owner--> `Person` with `php bin/console make:entity Task` as new field
+7. Create migration (`php bin/console make:migration`), run it (`php bin/console doctrine:migrations:migrate`)
+8. Add new files to git and commit
+
+### 06 - CRUD
+
+1. Generate CRUD for the entities (`php bin/console make:crud Task` and for `Person`)
+2. Run server and visit the pages
+3. Implement `__toString()` method in `Person` entity, so the form for `Task` works...
+
+## Hints
+
+### PhpStorm
+
+* If keeps caching, do File - Invalidate Caches / Restart ...
+
+### git
+
+* Don't develop in `master` branch (setup your workflow - incorporate issues and pull requests)
+* Do atomic commits (commit = atomic piece of work - changes which are related together tightly)
